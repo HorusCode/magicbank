@@ -1,0 +1,50 @@
+$accentOne: #60007d
+$accentTwo: #ff7700
+$accentThree: #79a6fe
+$textColorOne: #3a3a3a
+$textColorTwo: #959595
+$textHover: #37c2ff
+
+
+//Gradient List
+$listBlue: #009e68, #00b7b3
+$listG: #3734fa 25%, #7673f4 51%, #179efa 100%
+$listPurple: #9e0093, #240078
+$listPink: #576fe6 25%, #9844b7 51%, #e1357f 100%
+
+@mixin linearGradient($direction, $listColor)
+  background-image: linear-gradient($direction, $listColor)
+
+@mixin button($bg, $color, $borderRadius, $border: none)
+  display: inline-block
+  border: $border
+  color: $color
+  text-decoration: none
+  background-color: $bg
+  padding: 7px 20px
+  font-size: 15px
+  font-weight: 500
+  border-radius: $borderRadius
+  text-align: center
+  position: relative
+  outline: none
+  transition: .2s all ease-in-out
+  cursor: pointer
+  letter-spacing: 2px
+
+  &:focus, &:hover
+    text-decoration: none
+    color: $color
+
+  &:hover
+    background-color: lighten($bg, 5%)
+
+    &::after
+      opacity: .22
+
+  &:active
+    background-color: darken($bg, 5%)
+
+    &::after
+      opacity: .32
+

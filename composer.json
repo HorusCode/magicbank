@@ -1,0 +1,18 @@
+{
+    "name": "horusdev/magicbank",
+    "authors": [
+        {
+            "name": "HorusDev",
+            "email": "horusm99@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "Controller\\" : "controller",
+            "Model\\" : "model",
+            "DI\\": "core/DI"
+        }
+    },
+    "require": {}
+}
